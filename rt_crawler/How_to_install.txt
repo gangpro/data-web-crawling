@@ -1,0 +1,183 @@
+# How to install scrapy on macOS
+# macOS에 scrapy(Web Crawling과 Web Scraping을 위한 library module) 설치 방법
+# 설치 이후 PyCharm scrapy 사용을 위한 환경변수 설정 필수!!
+
+
+
+1. 터미널 실행 ---------------------------------------------------------------
+KANGs-MacBook-Pro ~ $ cd ~
+ ↳ cd ~ : 최상위 경로로 이동
+
+2. 아나콘다 가상환경 접속  ------------------------------------------------------
+KANGs-MacBook-Pro ~ $ source activate data_env
+ ↳ source activate 가상환경 이름
+
+3. scrapy 설치  ------------------------------------------------------------
+(data_env) @KANGs-MacBook-Pro ~ $ conda install -c conda-forge scrapy
+ ↳ Code 입력 후 Enter 빵 치면 아래와 같이 나오면서 중간에 설치를 원하면 y 버튼을 누르라고 한다.
+
+Collecting package metadata: done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /anaconda3/envs/data_env
+
+  added / updated specs:
+    - scrapy
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    appdirs-1.4.3              |             py_1          11 KB  conda-forge
+    atomicwrites-1.3.0         |             py_0           9 KB  conda-forge
+    attrs-19.1.0               |             py_0          32 KB  conda-forge
+    automat-0.7.0              |             py_1          28 KB  conda-forge
+    ca-certificates-2019.3.9   |       hecc5488_0         146 KB  conda-forge
+    certifi-2019.3.9           |           py36_0         149 KB  conda-forge
+    constantly-15.1.0          |             py_0           9 KB  conda-forge
+    cssselect-1.0.3            |             py_0          16 KB  conda-forge
+    hyperlink-17.3.1           |             py_0          28 KB  conda-forge
+    icu-58.2                   |    h0a44026_1000        22.3 MB  conda-forge
+    incremental-17.5.0         |             py_0          14 KB  conda-forge
+    libiconv-1.15              |    h1de35cc_1004         1.3 MB  conda-forge
+    libxml2-2.9.8              |    hf14e9c8_1005         1.9 MB  conda-forge
+    libxslt-1.1.32             |    h33a18ac_1002         490 KB  conda-forge
+    lxml-4.3.2                 |   py36h7166777_0         1.4 MB  conda-forge
+    more-itertools-4.3.0       |        py36_1000          83 KB  conda-forge
+    openssl-1.1.1b             |       h1de35cc_1         3.5 MB  conda-forge
+    parsel-1.5.1               |           py36_0          29 KB
+    pluggy-0.9.0               |             py_0          17 KB  conda-forge
+    py-1.8.0                   |             py_0          65 KB  conda-forge
+    pyasn1-0.4.4               |             py_1          47 KB  conda-forge
+    pyasn1-modules-0.2.4       |             py_0          34 KB  conda-forge
+    pydispatcher-2.0.5         |             py_1          12 KB  conda-forge
+    pyhamcrest-1.9.0           |             py_2          23 KB  conda-forge
+    pyopenssl-19.0.0           |           py36_0          81 KB  conda-forge
+    pytest-4.3.1               |           py36_0         342 KB  conda-forge
+    pytest-runner-4.4          |             py_0           8 KB  conda-forge
+    queuelib-1.5.0             |           py36_0          21 KB
+    scrapy-1.5.2               |           py36_0         314 KB  conda-forge
+    service_identity-17.0.0    |             py_0          11 KB  conda-forge
+    twisted-18.9.0             |py36h1de35cc_1000         4.9 MB  conda-forge
+    w3lib-1.20.0               |           py36_0         155 KB
+    zope.interface-4.6.0       |py36h1de35cc_1000         204 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        37.6 MB
+
+The following NEW packages will be INSTALLED:
+
+  appdirs            conda-forge/noarch::appdirs-1.4.3-py_1
+  atomicwrites       conda-forge/noarch::atomicwrites-1.3.0-py_0
+  attrs              conda-forge/noarch::attrs-19.1.0-py_0
+  automat            conda-forge/noarch::automat-0.7.0-py_1
+  constantly         conda-forge/noarch::constantly-15.1.0-py_0
+  cssselect          conda-forge/noarch::cssselect-1.0.3-py_0
+  hyperlink          conda-forge/noarch::hyperlink-17.3.1-py_0
+  icu                conda-forge/osx-64::icu-58.2-h0a44026_1000
+  incremental        conda-forge/noarch::incremental-17.5.0-py_0
+  libiconv           conda-forge/osx-64::libiconv-1.15-h1de35cc_1004
+  libxml2            conda-forge/osx-64::libxml2-2.9.8-hf14e9c8_1005
+  libxslt            conda-forge/osx-64::libxslt-1.1.32-h33a18ac_1002
+  lxml               conda-forge/osx-64::lxml-4.3.2-py36h7166777_0
+  more-itertools     conda-forge/osx-64::more-itertools-4.3.0-py36_1000
+  parsel             pkgs/main/osx-64::parsel-1.5.1-py36_0
+  pluggy             conda-forge/noarch::pluggy-0.9.0-py_0
+  py                 conda-forge/noarch::py-1.8.0-py_0
+  pyasn1             conda-forge/noarch::pyasn1-0.4.4-py_1
+  pyasn1-modules     conda-forge/noarch::pyasn1-modules-0.2.4-py_0
+  pydispatcher       conda-forge/noarch::pydispatcher-2.0.5-py_1
+  pyhamcrest         conda-forge/noarch::pyhamcrest-1.9.0-py_2
+  pyopenssl          conda-forge/osx-64::pyopenssl-19.0.0-py36_0
+  pytest             conda-forge/osx-64::pytest-4.3.1-py36_0
+  pytest-runner      conda-forge/noarch::pytest-runner-4.4-py_0
+  queuelib           pkgs/main/osx-64::queuelib-1.5.0-py36_0
+  scrapy             conda-forge/osx-64::scrapy-1.5.2-py36_0
+  service_identity   conda-forge/noarch::service_identity-17.0.0-py_0
+  twisted            conda-forge/osx-64::twisted-18.9.0-py36h1de35cc_1000
+  w3lib              pkgs/main/osx-64::w3lib-1.20.0-py36_0
+  zope.interface     conda-forge/osx-64::zope.interface-4.6.0-py36h1de35cc_1000
+
+The following packages will be UPDATED:
+
+  ca-certificates    pkgs/main::ca-certificates-2019.1.23-0 --> conda-forge::ca-certificates-2019.3.9-hecc5488_0
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  certifi                                         pkgs/main --> conda-forge
+  openssl                                         pkgs/main --> conda-forge
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+twisted-18.9.0       | 4.9 MB    | ##################################### | 100%
+hyperlink-17.3.1     | 28 KB     | ##################################### | 100%
+automat-0.7.0        | 28 KB     | ##################################### | 100%
+attrs-19.1.0         | 32 KB     | ##################################### | 100%
+scrapy-1.5.2         | 314 KB    | ##################################### | 100%
+pyasn1-0.4.4         | 47 KB     | ##################################### | 100%
+libiconv-1.15        | 1.3 MB    | ##################################### | 100%
+appdirs-1.4.3        | 11 KB     | ##################################### | 100%
+queuelib-1.5.0       | 21 KB     | ##################################### | 100%
+libxslt-1.1.32       | 490 KB    | ##################################### | 100%
+parsel-1.5.1         | 29 KB     | ##################################### | 100%
+atomicwrites-1.3.0   | 9 KB      | ##################################### | 100%
+icu-58.2             | 22.3 MB   | ##################################### | 100%
+w3lib-1.20.0         | 155 KB    | ##################################### | 100%
+libxml2-2.9.8        | 1.9 MB    | ##################################### | 100%
+pytest-runner-4.4    | 8 KB      | ##################################### | 100%
+pluggy-0.9.0         | 17 KB     | ##################################### | 100%
+lxml-4.3.2           | 1.4 MB    | ##################################### | 100%
+incremental-17.5.0   | 14 KB     | ##################################### | 100%
+zope.interface-4.6.0 | 204 KB    | ##################################### | 100%
+pyhamcrest-1.9.0     | 23 KB     | ##################################### | 100%
+openssl-1.1.1b       | 3.5 MB    | ##################################### | 100%
+pyopenssl-19.0.0     | 81 KB     | ##################################### | 100%
+certifi-2019.3.9     | 149 KB    | ##################################### | 100%
+more-itertools-4.3.0 | 83 KB     | ##################################### | 100%
+pyasn1-modules-0.2.4 | 34 KB     | ##################################### | 100%
+pytest-4.3.1         | 342 KB    | ##################################### | 100%
+cssselect-1.0.3      | 16 KB     | ##################################### | 100%
+ca-certificates-2019 | 146 KB    | ##################################### | 100%
+service_identity-17. | 11 KB     | ##################################### | 100%
+py-1.8.0             | 65 KB     | ##################################### | 100%
+pydispatcher-2.0.5   | 12 KB     | ##################################### | 100%
+constantly-15.1.0    | 9 KB      | ##################################### | 100%
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+
+
+
+
+
+(정리 중)
+
+
+
+
+4. scrapy project 생성 
+5. 우리가 사용하는 pycharm project안에서 scrapy project를 생성      <-터미널 기록 있음 scrapy start project rt_crawler 
+6. 프로젝트가 정상적으로 생성되면 SCRapy project root 폴더를 library 폴더로 지정 => 환경변수를 하나 설정해서 library폴더로 지정(PYTHONPATH)
+
+
+
+
+
+4. PyCharm에서 scrapy 환경변수 설정 방법  ------------------------------------------
+   - PyCharm 프로그램 실행
+   - Preference
+   - Project : PycharmsProjects
+   - Project Interpreter
+   - 톱니바퀴 모양 버튼 클릭
+   - show all
+   - show paths for the selected interpreter 버튼 클릭
+   - +버튼 클릭
+   - 추가하고 싶은 라이브러리 추가
+
+
+# 설치 끝
